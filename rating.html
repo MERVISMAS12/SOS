@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Rating</title>
+ <!-- <link rel = "stylesheet" href = "style3.css"> -->
+  <link rel = "icon" type = "logo" href="images/LOGO.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+  body{
+    padding: 20px;
+  }
+  #button {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #FAFAFA;
+  background: #0F52BA;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  margin: 35px 0;
+}
+
+#button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+.card-body{
+  font-family: Quicksand;
+font-weight: 500;
+  background-color: #ffe6ee;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px 10px #dbdbdb
+}
+.card{
+  margin:10px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  font-size: large;
+}
+h2{
+  font-family: Quicksand;
+  font-weight: 500;
+  letter-spacing:5px;
+  text-align: center;
+  color: navy;
+}
+input{
+  width: auto;
+}
+.per-1{
+background-color: white;
+}
+
+#o-1{font-size: large;padding: 10px; border : black 1px solid ;border-radius: 10px;margin-top: 10px;}
+#o-2{font-size: large;padding: 10px; border : black 1px solid ;border-radius: 10px;margin-top: 10px;}
+#o-3{font-size: large;padding: 10px; border : black 1px solid ;border-radius: 10px;margin-top: 10px;}
+#o-4{font-size: large;padding: 10px; border : black 1px solid ;border-radius: 10px;margin-top: 10px;}
+#o-5{font-size: large;padding: 10px; border : black 1px solid ;border-radius: 10px;margin-top: 10px;}
+#o-6{font-size: large;padding: 10px; border : black 1px solid ;border-radius: 10px;margin-top: 10px;}
+</style>
+</head>
+
+<body>
+  <header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <img class="logo" src="images/LOGO.png" alt="logo" style=" border-radius: 100%;">
+         &nbsp;
+         &nbsp;
+         &nbsp;
+        <h3 class = "welcome">  Welcome to Statistical Optimizer for Student</h2>
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+       <div style="position: absolute ; right: 30px;">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://roshni-sarda.github.io/INFOMANIA/about.html#fe">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://muquestionpapers.com/">Previous-Year-Question</a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+              Register
+            </button>
+        </li>
+      </ul>
+      </div>
+    </div>
+    </nav>
+      <marquee style=" font-family:Book Antiqua; color: black; background-color:#a3cef1
+  "  scrollamount="10" loop="infinite" > Statistic Optimizer for Students is a interactive software interface build for students, to optimize their academic performance by keeping track of marks and attendance.</marquee>
+      </header>
+      <h1>Subject Rating</h1> 
+      <form  onsubmit="return false">
+        <script defer>
+          localStorage.setItem("sub", 6);
+        </script>
+        <select id="sel1"  required>
+          <option id="1" value="1">SEM I</option>
+          <option id="2" value="2">SEM II</option>
+          <option id="3" value="3">SEM III</option>
+          <option id="4" value="4">SEM IV</option>
+          <option id="5" value="5">SEM V</option>
+          <option id="6" value="6">SEM VI</option>
+          <option id="7" value="7">SEM VII</option>
+          <option id="8" value="8">SEM VIII</option>
+         </select>
+       <select id="sel2"  required>
+       <option id="COMP" value="comps">Computer</option>
+       <option id="IT" value="it" >IT</option>
+       <option id="EXTC" value="extc">EXTC</option>
+      </select>
+      <button onclick="updatestate()" >Select</button>
+
+      <script>
+        function updatestate(){
+         var year = document.getElementById("sel1").value;
+         var dept = document.getElementById("sel2").value;
+         var y = parseInt(year);
+         var subjects = [10][10];
+         console.log(y);
+         console.log(dept);
+          
+    if(dept == 'comps'){
+    subjects =[
+      ['Engineering Mathematics-I','Engineering Physics-I','Engineering Chemistry-I','Engineering Mechanics','Basic Electrical Engineering'],
+      ['Engineering Mathematics-II','Engineering Physics-II','Engineering Chemistry-II','Engineering Graphics','C programming','Professional Communication and Ethics- I'],
+      ['Engineering Mathematics-III ','Discrete Structures and Graph Theory','Data Structure','Digital Logic & Computer Architecture ', 'Computer Graphics'],
+      ['Engineering Mathematics-IV', 'Analysis of Algorithm', 'Database Management System','Operating System ','Microprocessor'],
+      ['Theoretical Computer Science', 'Software Engineering', 'Computer Network', 'Data Warehousing & Mining', 'Department Level Optional Course -1'],
+      ['System Programming & Compiler Construction', 'Cryptography & System Security', 'Mobile Computing', 'Artificial Intelligence','Department Level Optional Course -2'],
+      ['Machine Learning', 'Big Data Analysis ', 'Department Level Optional Course-3', 'Department Level Optional Course-4', 'Institute Level Optional Course-1'],
+      ['Human Machine Interaction', 'Distributed Computing', 'Department Level Optional Course -IV ', 'Institute Level Optional Course-II']
+    ]
+  }
+
+  if(dept == 'it'){
+        subjects =[
+        ['Engineering Mathematics-I','Engineering Physics-I','Engineering Chemistry-I','Engineering Mechanics','Basic Electrical Engineering'],
+        ['Engineering Mathematics-II','Engineering Physics-II','Engineering Chemistry-II','Engineering Graphics','C programming','Professional Communication and Ethics- I'],
+        ['Applied Mathematics III','Logic Design','Data Structures & Analysis','Principle of Communications', 'Database Management System'],
+        ['Applied Mathematics IV','Computer Networks','Computer Organization and Architecture','Automata Theory','Operating System '],
+        ['Microcontroller and Embedded Programming','Internet Programming','Advanced Data Management Technology','Cryptography & Network Security','Department Level Optional Course-I'],
+        ['Software Engineering with Project Management','Data Mining and Business Intelligence','Cloud Computing & Services','Wireless Networks','Department Level Optional Course -II'],
+        ['Enterprise Network Design','Infrastructure Security','Artificial Intelligence','Department Level Optional Course -III','Institute Level OptionalCourse-I'],
+        ['Big Data Analysis','Internet of Everything','Department Level Optional Course - IV','Institute Level Optional Course-II']
+      ]
+    }
+  if(dept == 'extc'){
+        
+        subjects =[
+        ['Engineering Mathematics-I','Engineering Physics-I','Engineering Chemistry-I','Engineering Mechanics','Basic Electrical Engineering'],
+        ['Engineering Mathematics-II','Engineering Physics-II','Engineering Chemistry-II','Engineering Graphics','C programming','Professional Communication and Ethics- I'],
+        ['Engineering MathematicsIII ', 'Electronic Devices & Circuits', 'Digital System Design', 'Network Theory','Electronic Instrumentation & Control Systems'],
+        ['Engineering MathematicsIV', 'Microcontrollers', 'Linear Integrated Circuits','Signals & Systems','Principles of Communication Engineering'],
+        ['Digital Communication','Discrete Time Signal Processing','Digital VLSI','Random Signal Analysis','Department Optional Course-1'],
+        ['Electromagnetics and Antenna','Computer Communication Networks','Image Processing and Machine Vision','Artificial Neural Network and Fuzzy Logic','Department Level Optional Course-2'],
+        ['Microwave Engineering','Mobile Communication System','Department Optional Course-3','Department Optional Course-4','Institute Level Optional Course-1'],
+        ['Optical Communication and Networks','Department Optional Course-5','Department Optional Course-6','Institute Level Optional Course-2']
+      ]
+    }
+
+  let card = document.getElementsByClassName('col-sm');
+  for (let i = 1; i <= 8; i++) {
+    if( y == i){
+      var z = y-1;
+       document.getElementById('sub1').innerHTML = subjects[z][0];
+       document.getElementById('sub2').innerHTML = subjects[z][1];
+       document.getElementById('sub3').innerHTML = subjects[z][2];
+       document.getElementById('sub4').innerHTML = subjects[z][3];
+       document.getElementById('sub5').innerHTML = subjects[z][4];
+       document.getElementById('sub6').innerHTML = subjects[z][5];
+       
+       localStorage.setItem("sub", 6);
+      if(subjects[z][4] == undefined){
+        card[4].style.visibility = "hidden";
+        localStorage.setItem("sub", 4);
+      }
+      else{
+        card[4].style.visibility = "visible";
+      }
+
+      if(subjects[z][5] == undefined){ 
+        card[5].style.visibility = "hidden";
+        localStorage.setItem("sub", 5);
+      }
+      else{
+         card[5].style.visibility = "visible";
+        }
+      } 
+  }  
+}
+       </script>   
+      
+<div class="row">
+    <div class="col-sm">
+      <div class="card">
+        <div class="card-body">
+          <h2 id="sub1">Subject 1</h2><br>
+          <label >Rating</label>&nbsp;&nbsp;
+          <select required class="rate" style="width:210px ;height:25px;">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            </select><br>    
+            <div id="r-1">Marks Obtainable : <span class="score"></span> </div> 
+           </div>
+        </div>
+    </div>
+    <div class="col-sm">
+        <div class="card">
+          <div class="card-body">
+            <h2 id="sub2">Subject 2</h2><br>
+            <label >Rating</label>&nbsp;&nbsp;
+            <select required class="rate" style="width:210px ;height:25px;">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              </select><br>    
+              <div id="r-2">Marks Obtainable : <span class="score"></span> </div>  
+             </div>
+          </div>
+      </div>
+      <div class="col-sm">
+        <div class="card">
+          <div class="card-body">
+            <h2 id="sub3">Subject 3</h2><br>
+            <label >Rating</label>&nbsp;&nbsp;
+            <select required class="rate" style="width:210px ;height:25px;">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              </select><br>    
+              <div id="r-3">Marks Obtainable : <span class="score"></span> </div> 
+             </div>
+          </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card">
+            <div class="card-body">
+              <h2 id="sub4">Subject 4</h2><br>
+              <label >Rating</label>&nbsp;&nbsp;
+              <select required class="rate" style="width:210px ;height:25px;">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                </select><br>    
+                <div id="r-4">Marks Obtainable : <span class="score"></span> </div> 
+               </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="card">
+              <div class="card-body">
+                <h2 id="sub5">Subject 5</h2><br>
+                <label >Rating</label>&nbsp;&nbsp;
+                <select required class="rate" style="width:210px ;height:25px;">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  </select><br>    
+                  <div id="r-5">Marks Obtainable : <span class="score"></span> </div> 
+                 </div>
+              </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+              <div class="card-body">
+                <h2 id="sub6">Subject 6</h2><br>
+                <label >Rating</label>&nbsp;&nbsp;
+                <select required class="rate" style="width:210px ;height:25px;">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  </select><br>   
+                  <div id="r-6">Marks Obtainable : <span class="score"></span> </div> 
+                  
+                 </div>
+              </div>
+          </div>
+          </div>
+
+          <div class="card mx-auto" style="width: 350px; margin :10px;">
+            <div class="card-body">
+              <div class="result" style="display: inline;">
+             
+            <label style="color : black;" >CGPA</label>
+            <!-- <input id ="cgpa" style="width:200px; height:25px;float: right;" type = "number"  readonly> <br> -->
+            <div id ="cgpa" style="width:200px; height:25px;float: right;"></div><br>
+            <center>
+              <input style="text-decoration: none;"  onclick="getscore()" type = "submit" value = "Submit" id="button">
+          </center>
+          </div>
+          </div>
+          </div>
+
+          
+         </form>
+         <script defer>
+          function getscore(){
+            let r = document.getElementsByClassName('rate');
+            let s = document.getElementsByClassName('score');
+            let c = document.getElementById('cgpa');
+            let total = 0;
+            for (let i = 0; i < localStorage.getItem("sub"); i++) {
+              console.log(r[i].value);
+              s[i].innerHTML = parseInt(35 + parseFloat(6.5* r[i].value)) ;
+              total = total + parseInt(35 + parseFloat(6.5* r[i].value)) ;
+            }
+            let val = 100 * parseInt(localStorage.getItem("sub")) ;
+            let per = (total/val)*100;
+            let cgpa = per / 9.5;
+            console.log(cgpa);
+            console.log(total);
+            console.log(val);
+            if(cgpa > 10){
+              cgpa = 10;
+            }
+            c.innerHTML = cgpa.toFixed(2);
+          }
+         </script>
+</body>
+</html>

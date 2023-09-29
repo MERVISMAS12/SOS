@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Pointer Score</title>
+ <!-- <link rel = "stylesheet" href = "style3.css"> -->
+  <link rel = "icon" type = "logo" href="images/LOGO.png">
+  <script src="score_detector.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    
+    body{
+      padding: 20px;
+    }
+    #button {
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #FAFAFA;
+    background: #0F52BA;
+    box-shadow: 3px 3px #fafafa;
+    cursor: pointer;
+    margin: 35px 0;
+  }
+  
+  #button:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+  }
+  .card-body{
+    font-family: Quicksand;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: #e9ecef;
+    box-shadow: 5px 5px 20px 10px #dbdbdb
+  }
+  .card{
+    margin:10px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    font-size: large;
+  }
+  #button {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #FAFAFA;
+  background: #0F52BA;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  margin: 35px 0;
+}
+
+#button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+</style>
+</head>
+
+<body>
+  <header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <img class="logo" src="images/LOGO.png" alt="logo" style=" border-radius: 100%;">
+         &nbsp;
+         &nbsp;
+         &nbsp;
+        <h2 class = "welcome">  Welcome to Statistical Optimizer for Student</h2>
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+       <div style="position: absolute ; right: 30px;">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://roshni-sarda.github.io/INFOMANIA/about.html#fe">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://muquestionpapers.com/">Previous-Year-Question</a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+              Register
+            </button>
+        </li>
+      </ul>
+      </div>
+    </div>
+    </nav>
+      <marquee style=" font-family:Book Antiqua; color: black; background-color:#a3cef1
+  "  scrollamount="10" loop="infinite" > Statistic Optimizer for Students is a interactive software interface build for students, to optimize their academic performance by keeping track of marks and attendance.</marquee>
+      </header>
+<h1>Pointer Score</h1>
+<form onsubmit="return false">
+<select>
+ <option>SEM-1</option>
+ <option>SEM-2</option>
+</select>
+
+<div class="row">
+  <div class="col-sm">
+    <div class="card">
+      <div class="card-body">
+ <h2>Preference 1</h2>
+
+ <label >Subject</label>
+ <input  style="width:320px; height:25px;" type = "text" value="Mathematics"  placeholder=""  required>
+  <label >Marks</label>
+ <div class="IAT">
+            <h4 style="text-align:left; padding-left:10px;">Target: </h4>
+            <div id="p-1"> </div>
+  </div>
+ </div>
+ </div>
+</div><br>
+
+<div class="col-sm">
+  <div class="card">
+    <div class="card-body">
+
+ <h2>Preference 2</h2>
+
+ <label>Subject</label>
+ <input style="width:320px; height:25px;" value="Chemistry" type = "text"  required>
+  <label >Marks</label>
+ <div class="IAT">
+            <h4 style="text-align:left; padding-left:10px;">Target: </h4>
+            <div id="p-2"> </div>
+  </div>
+</div>
+</div>
+</div>
+
+<br>
+ <div class="col-sm">
+  <div class="card">
+    <div class="card-body">
+ <h2>Preference 3</h2>
+ <label>Subject</label>
+ <input style="width:320px; height:25px;" value="Physics" type = "text" required>
+  <label >Marks</label>
+ <div class="IAT">
+            <h4 style="text-align:left; padding-left:10px;">Target: </h4>
+            <div id="p-3"> </div>
+ </div>
+ </div>
+</div>
+</div>
+</div>
+
+<div class="row">
+  <div class="col-sm">
+    <div class="card">
+      <div class="card-body">
+
+ <h2>Preference 4</h2>
+
+ <label>Subject</label>
+ <input  style="width:320px; height:25px;" value="Graphics" type = "text" required>
+  <label >Marks</label>
+ <div class="IAT">
+            <h4 style="text-align:left; padding-left:10px;">Target: </h4>
+            <div id="p-4"> </div>
+ </div>
+  </div>
+ </div>
+ </div>
+ <div class="col-sm">
+  <div class="card">
+    <div class="card-body">
+
+ <h2>Preference 5</h2>
+
+ <label>Subject</label>
+ <input style="width:320px; height:25px;" value="C Programming" type = "text" required>
+    <label >Marks</label>
+ <div class="IAT">
+            <h4 style="text-align:left; padding-left:10px;">Target: </h4>
+            <div id="p-5"> </div>
+ </div>
+ </div></div></div>
+
+ 
+ <div class="col-sm">
+  <div class="card">
+    <div class="card-body">
+
+ <h2>Preference 6</h2>
+
+ <label>Subject</label>
+ <input style="width:320px; height:25px; " value="Professional Communication Ethics" type = "text"  required>
+  <label >Marks</label>
+ <div class="IAT">
+            <h4 style="text-align:left; padding-left:10px;">Target: </h4>
+            <div id="p-6"> </div>
+ </div>
+</div>
+ </div>
+</div>
+</div>
+<div class="card mx-auto" style="width: 350px; margin :10px;">
+  <div class="card-body">
+    <div class="result" style="display: inline;">
+   
+  <label style="color : black;" >CGPA</label>
+  <input id ="cgpa" style="width:200px; height:25px;float: right;" type = "number" value="0" placeholder="Enter the cgpa" max="10" min="0" required> <br>
+  <label style="color : black;" >Total Marks</label>
+  <input id ="marks" style="width:200px; height:25px;float: right;" type = "number" value="0" placeholder="Enter the marks"  required> <br>
+  <center> <input style=" text-align: center;"  onclick="score1()" type = "submit" value = "Submit" id="button">
+</center>
+</div>
+</div>
+</div>
+
+</form>
+
+<br> <br>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+</body>
+</html>

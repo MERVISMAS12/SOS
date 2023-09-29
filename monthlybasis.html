@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Monthly Basis</title>
+  <link rel = "icon" type = "logo" href="images/LOGO.png">
+ <script src="monthly.js" defer></script>
+   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+  </style>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    
+    body{
+      padding: 20px;
+    }
+    #button {
+    font-family: monospace;
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid #FAFAFA;
+    background: #0F52BA;
+    box-shadow: 3px 3px #fafafa;
+    cursor: pointer;
+    margin: 35px 0;
+  }
+  
+  #button:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+  }
+  .card-body{
+    font-family: Quicksand;
+    font-weight: 500;
+    border-radius: 10px;
+    background-color: #e9ecef;
+    box-shadow: 5px 5px 20px 10px #dbdbdb
+  }
+  .card{
+    margin:10px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    font-size: large;
+  }
+  #button {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 2px solid #FAFAFA;
+  background: #0F52BA;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  margin: 35px 0;
+}
+
+#button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+</style>
+</head>
+
+<body>
+  <header>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+       <img class="logo" src="images/LOGO.png" alt="logo" style=" border-radius: 100%;">
+         &nbsp;
+         &nbsp;
+         &nbsp;
+        <h3 class = "welcome">  Welcome to Statistical Optimizer for Student</h3>
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" >
+       <div style="position: absolute ; right: 30px;">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://roshni-sarda.github.io/INFOMANIA/about.html#fe">Books</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://muquestionpapers.com/">Previous-Year-Question</a>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+              Register
+            </button>
+        </li>
+      </ul>
+      </div>
+    </div>
+    </nav>
+      <marquee style=" font-family:Book Antiqua; color: black; background-color:#a3cef1
+  "  scrollamount="10" loop="infinite" > Statistic Optimizer for Students is a interactive software interface build for students, to optimize their academic performance by keeping track of marks and attendance.</marquee>
+      </header>
+<h1>Monthly Basis Attendance</h1>
+
+<form onsubmit="return false">
+<label style=" color: black; float: left;">Select Month: </label>&nbsp;
+<input style=" text-align: center; height:35px; float: left; " type="month" required >
+
+
+  <br>
+  <br>
+<div class="row">
+  <div class="col-sm">
+    <div class="card">
+      <div class="card-body">
+  
+  <h2>Mathematics</h2><br>
+ <label>Number of hours missed</label>
+ <input value="0" id="h-1" style="width:320px; height:25px;" type = "number" placeholder="" max="20" min="0" required>
+ <br><br>
+   <div class="per1">
+    <h4 style="text-align:left; padding-left:10px;">Number of lectures:</h4>
+    <div id="o-1"></div>
+   </div>
+   <br>
+   <div class="per1">
+    <h4 style="text-align:left; padding-left:10px;">Status: </h4>
+    <div id="s-1"></div>
+  </div>
+ </div>
+</div>
+</div>
+
+
+
+  <div class="col-sm">
+   <div class="card">
+    <div class="card-body">
+ <h2>Chemistry</h2><br>
+
+ <label>Number of hours missed</label>
+ <input value="0" id="h-2" style="width:320px; height:35px;" type = "number" placeholder="" max="20" min="0" required>
+<br><br>
+   <div class="per1">
+    <h4 style="text-align:left; padding-left:10px;">Number of lectures:</h4>
+    <div id="o-2"></div>
+   </div>
+   <br>
+   <div class="per1">
+    <h4 style="text-align:left; padding-left:10px;">Status: </h4>
+    <div id="s-2"></div>
+    </div>
+ </div>
+</div>
+</div>
+
+  <div class="col-sm">
+   <div class="card">
+    <div class="card-body">
+ <h2>Physics</h2><br>
+
+ <label>Number of hours missed</label>
+ <input value="0" id="h-3" style="width:320px; height:35px;" type = "number" placeholder="" max="20" min="0" required>
+<br><br>
+   <div class="per1">
+    <h4 style="text-align:left; padding-left:10px;">Number of lectures:</h4>
+    <div id="o-3"></div>
+   </div>
+   <br>
+   <div class="per1">
+    <h4 style="text-align:left; padding-left:10px;">Status: </h4>
+    <div id="s-3"></div>
+  </div>
+ </div>
+</div>
+</div>
+</div>
+
+<div class="row">
+ <div class="col-sm">
+   <div class="card">
+    <div class="card-body">
+ <h2>Graphics</h2><br>
+
+ <label>Number of hours missed</label>
+ <input value="0" id="h-4" style="width:320px; height:35px;" type = "number" placeholder="" max="20" min="0" required>
+<br><br>
+   <div class="per1">
+    <h4 style="text-align:left; padding-left:10px;">Number of lectures:</h4>
+    <div id="o-4"></div>
+   </div>
+   <br>
+   <div class="per1">
+    <h4 style="text-align:left; padding-left:10px;">Status: </h4>
+    <div id="s-4"></div>
+  </div>
+ </div>
+</div>
+</div>
+
+ 
+  <div class="col-sm">
+   <div class="card">
+    <div class="card-body">
+ <h2>C Programming</h2><br>
+
+ <label>Number of hours missed</label>
+ <input value="0" id="h-5" style="width:320px; height:35px;" type = "number" placeholder="" max="20" min="0" required>
+ <br><br>
+   <div class="per1">
+    <h4 style="text-align:left; padding-left:10px;">Number of lectures:</h4>
+    <div id="o-5"></div>
+   </div>
+   <br>
+   <div class="per1">
+    <h4 style="text-align:left; padding-left:10px;">Status: </h4>
+    <div id="s-5"></div>
+  </div>
+ </div>
+</div>
+</div>
+
+   
+
+  <div class="col-sm">
+   <div class="card">
+    <div class="card-body">
+ <h2 style="font-size: 27.5px;" >Professional Communication Ethics </h2>
+
+ <label>Number of hours missed</label>
+ <input value="0" id="h-6" style="width:320px; height:35px; " type = "number" placeholder="" max="20" min="0" required>
+<br><br>
+   <div class="per1" >
+    <h4 style="text-align:left; padding-left:10px;">Number of lectures:</h4>
+    <div id="o-6"></div>
+   </div>
+   <br>
+   <div class="per1">
+    <h4 style="text-align:left; padding-left:10px;">Status: </h4>
+    <div id="s-6"></div>
+  </div>
+ </div>
+</div>
+</div>
+</div>
+         <center>
+            <input style=" text-align: center;"  onclick="attendance()" type = "submit" value = "Submit" id="button">
+         </center> 
+         
+         
+    
+</form>
+
+
+
+</body>
+</html>
